@@ -1,5 +1,5 @@
 const STORE = {
-    
+
     questions: [
         //1    
         {
@@ -56,7 +56,7 @@ const STORE = {
                 "(d) 72, 82",
                 "(e) none of the above"
             ],
-            answer: "(c) 70, 80"
+            answer: "(c) 70, 80",
             answerExplanation: "There are two interwoven sequences, add 14 starting at 14 and add 16 starting at 16."
         },
         //5
@@ -72,35 +72,37 @@ const STORE = {
                 "(e) platypus",
                 "(f) aardvark"
             ],
-            answer: "(b) tortoise"
+            answer: "(b) tortoise",
             answerExplanation: "The name of each creature starts with the letter that comes two letters in the alphabet after the last letter of the previous creature. Also, the name of each creature has one more letter than the previous creature."
         },
         //6
         {
             questionType: "Logical reasoning - Progressive matrices test",
-            questionExplanation: "This section will test one’s ability to recognize patterns and designs, one’s ability to think logically but at the same time to explore with an open mind the various possibilities that might lead to a correct answer.  A matrix is an array of squares in which one of the squares has been omitted, and where you must choose the correct missing square from a number of options. Study the matrix to decide what pattern is occurring, either by looking across each line and down each column, looking at the array as a while or looking at the relationship between different squares within the array.",
-            question: "Which is the missing section?<br>images/questions-answers/q-06</br>",
+            questionExplanation: "This section will test one’s ability to recognize patterns and designs, one’s ability to think logically but at the same time to explore with an open mind the various possibilities that might lead to a correct answer. A matrix is an array of squares in which one of the squares has been omitted, and where you must choose the correct missing square from a number of options. Study the matrix to decide what pattern is occurring, either by looking across each line and down each column, looking at the array as a while or looking at the relationship between different squares within the array.",
+            question: "Which is the missing section?<br><img src="images/questions-answers/q-06/question06.png" alt="Pattern and design. This question may be difficult for the visually impared">",
             options: [
-                "(a) squirrel",
-                "(b) tortoise",
-                "(c) tigress",
-                "(d) wildebeest",
-                "(e) platypus",
-                "(f) aardvark"
+                "(a) <img src="images/questions-answers/q-06/answers/01answerA.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
+                "(b) <img src="images/questions-answers/q-06/answers/02answerB.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
+                "(c) <img src="images/questions-answers/q-06/answers/03answerC.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
+                "(d) <img src="images/questions-answers/q-06/answers/04answerD.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
+                "(e) <img src="images/questions-answers/q-06/answers/05answerE.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
+                "(f) <img src="images/questions-answers/q-06/answers/06answerF.png" alt="Piece that may fit into question. This question may be difficult for the visually impared.">",
             ],
-            answer: "(b) tortoise"
-            answerExplanation: "The name of each creature starts with the letter that comes two letters in the alphabet after the last letter of the previous creature. Also, the name of each creature has one more letter than the previous creature."
+            answer: "(b) <img src="images/questions-answers/q-06/answers/02answerB.png">",
+            answerExplanation: "Looking across and down, alternative circle combinations are repeated with the addition of an extra circle."
         },
         //7
         {
-            question: "Open the abbreviation HTML",
+            questionType: "Creativity - Lateral thinking",
+            questionExplanation: "Lateral thinking is a systematic way of approaching creative thinking. It is a method of seeking to solve problems in unique and different ways, by looking at a problem from many angles rather than searching for a direct head-on solution. It involves the need to think outside the box and develop a degree of creative, innovative thinking, which seeks to change our natural and traditional perceptions, concepts, and ideas. Think laterally and creatively and look for solutions that may not seem apparent on the first inspection.",
+            question: "How many circles appear above?<br><img src="images/questions-answers/q-07/question07.png">",
             options: [
-                "Hyper Text Module Language", 
-                "Hyper Text Markup Language", 
-                "Hyper Test Markup Language",
-                "Hyperlink Markup Language"
+                "(a) 11",
+                "(b) 1",
+                "(c) 0",
             ],
-            answer: "Hyper Text Markup Language"
+            answer: "(b) 1",
+            answerExplanation: "There is only one complete circle, in the middle of the image. The rest are arches and incomplete circles."
         },
     ],
     currentQuestion: 0,
