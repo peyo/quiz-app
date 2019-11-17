@@ -1,0 +1,53 @@
+/* css for all content on first page (below) */
+
+body {
+    font-family: Helvetica, sans-serif;
+    color: #404040;
+    background-color: #fdfdfd;
+    padding: 0px 6px;
+}
+
+header {
+    margin-top: 96px;
+    height: 50px;
+    margin-bottom: 36px;
+}
+
+fieldset {
+    border-radius: .15em;
+}
+
+.title-content {
+    padding: 30px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.question {
+    padding-left: 30px;
+    font-size: 18px;
+    margin: 0 auto;
+}
+
+.choices {
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+.around-the-button {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: #cccccc;
+    border: none;
+    padding: 9px 25px;
+    font-size: 15px;
+    border-radius: .12em;
+}
+
+/* css for all content on first page (above) */
+
