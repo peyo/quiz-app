@@ -9,8 +9,19 @@ body {
 
 header {
     margin-top: 96px;
-    height: 50px;
+    height: 60px;
     margin-bottom: 36px;
+}
+
+.question-and-score {
+    display: inline;
+    color: #fdfdfd;
+    background-color: #00b3b3;
+    padding: 3px 6px 3px 6px;
+}
+
+.question-and-score:empty {
+    padding: 0px;
 }
 
 fieldset {
@@ -18,20 +29,63 @@ fieldset {
 }
 
 .title-content {
-    padding: 30px;
+    padding: 15px 30px;
     font-size: 18px;
     margin: 0 auto;
+}
+
+.question-type {
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.question-type:empty {
+    padding: 0px;
+}
+
+.question-explanation {
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.question-explanation:empty {
+    padding: 0px;
 }
 
 .question {
-    padding-left: 30px;
-    font-size: 18px;
+    padding: 15px 30px 30px;
     margin: 0 auto;
 }
 
+.question:empty {
+    padding: 0px;
+}
+
 .choices {
-    padding-left: 30px;
+    padding: 0px 30px 30px 30px;
     margin: 0 auto;
+}
+
+.choices:empty {
+    padding: 0px;
+}
+
+.answer {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.answer:empty {
+    padding: 0px;
+}
+
+.answer-explanation {
+    padding: 15px 30px;
+    margin: 0 auto;
+}
+
+.answer-explanation:empty {
+    padding: 0px;
 }
 
 .around-the-button {
