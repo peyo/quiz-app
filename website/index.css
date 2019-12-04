@@ -1,10 +1,9 @@
-/* css for all content on first page (below) */
-
 body {
     font-family: Helvetica, sans-serif;
     color: #404040;
-    background-color: #fdfdfd;
+    background-color: #f0f0f0;
     padding: 0px 6px;
+    line-height: 1.2;
 }
 
 header {
@@ -13,15 +12,30 @@ header {
     margin-bottom: 36px;
 }
 
-.question-and-score {
+.question-number {
     display: inline;
-    color: #fdfdfd;
+    color: #f0f0f0;
     background-color: #00b3b3;
-    padding: 3px 6px 3px 6px;
+    padding: 3px 6px;
 }
 
-.question-and-score:empty {
-    padding: 0px;
+.score {
+    display: inline;
+    color: #f0f0f0;
+    background-color: #00b3b3;
+    padding: 3px 6px;
+}
+
+.incorrect {
+    display: inline;
+    color: #f0f0f0;
+    background-color: #00b3b3;
+    padding: 3px 6px;
+}
+
+.intro-highlights {
+    display: inline;
+    background-color: #bee8e8;
 }
 
 fieldset {
@@ -29,79 +43,82 @@ fieldset {
 }
 
 .title-content {
-    padding: 15px 30px;
+    padding: 30px;
     font-size: 18px;
-    margin: 0 auto;
 }
 
 .question-type {
-    padding: 15px 30px;
-    margin: 0 auto;
-}
-
-.question-type:empty {
-    padding: 0px;
+    padding: 30px 30px 0px 30px;
 }
 
 .question-explanation {
-    padding: 15px 30px;
-    margin: 0 auto;
+    padding: 30px 30px 0px 30px;
 }
 
-.question-explanation:empty {
+.question-line {
+    padding: 30px 30px 0px 30px;
+    font-weight: bold;
+}
+
+.question-image {
+    padding: 30px 30px 0px 30px;
+}
+
+.question-image:empty {
     padding: 0px;
 }
 
-.question {
-    padding: 15px 30px 30px;
-    margin: 0 auto;
+.js-choices {
+    padding: 30px 30px 0px 30px;
 }
 
-.question:empty {
+.correct-explanation {
+    padding: 12px 30px 12px 27px;
+    display: block;
+}
+
+.correct-explanation:empty {
     padding: 0px;
 }
 
-.choices {
+.answer-bg {
+    background-color: #0080ff;
+    color: #f0f0f0;
+    padding: 3px 6px;
+    border-radius: .15em
+}
+
+.answer-bg:empty {
+    padding: 0px;
+}
+
+.answer-explanation-bg {
+    background-color: #e9e9e9;
+    padding: 6px 6px;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    border-style: dotted;
+    border-width: .5px; 
+    border-color: #d0d0d0;
+    border-radius: .15em;
+}
+
+.answer-explanation-bg:empty {
+    padding: 0px;
+}
+
+.final {
     padding: 0px 30px 30px 30px;
-    margin: 0 auto;
-}
-
-.choices:empty {
-    padding: 0px;
-}
-
-.answer {
-    padding: 30px;
-    margin: 0 auto;
-}
-
-.answer:empty {
-    padding: 0px;
-}
-
-.answer-explanation {
-    padding: 15px 30px;
-    margin: 0 auto;
-}
-
-.answer-explanation:empty {
-    padding: 0px;
 }
 
 .around-the-button {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    margin: 0 auto;
+    padding: 0px 30px 30px 30px;
 }
 
-.button {
+button {
     background-color: #cccccc;
     border: none;
     padding: 9px 25px;
     font-size: 15px;
-    border-radius: .12em;
+    border-radius: .15em;
 }
-
-/* css for all content on first page (above) */
-
