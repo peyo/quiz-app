@@ -109,6 +109,7 @@ function checkSelectedChoice() {
     event.preventDefault();
     let currentQ = STORE.questions[STORE.currentQuestion];
     let selectedChoice = $("input[name=choices]:checked").val();
+    
     if (!selectedChoice) {
       alert("Choose an answer.");
       return;
