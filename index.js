@@ -50,20 +50,20 @@ function displayQuestion() {
   displayQuestionNumberAndScore();
   const questionHtml = $(`
     <div>
-      <form id="js-questions" class="question-form">
-        <fieldset>
+      <fieldset>
+        <form id="js-questions" class="question-form">
           <div class="question-type">${question.questionType}</div>
           <div class="question-explanation">${question.questionExplanation}</div>
           <div class="question-line">${question.question.text}</div>
           <div class="question-image">${question.question.image}</div>
           <div class="js-choices"></div>
-          <div class="correct-explanation"></div>
           <div class="around-the-button">
             <button type="submit" class="submit-button">Submit ></button>
             <button type = "button" class="next-question-button">Next ></button>
           </div>
-        </fieldset>
-      </form>
+        </form>
+        <div class="correct-explanation"></div>
+      </fieldset>
     </div>
   `);
 $("main").html(questionHtml);
@@ -93,10 +93,10 @@ function showChoices()
 function displayQuestionNumberAndScore() {
   const questionAndScoreHtml = $(`
     <div class="top-of-page">
-      <h1>Thinkful Quiz App</h1>
+      <h1>Sample Intelligence Test</h1>
       <div class="question-number">Question ${STORE.currentQuestion + 1} of ${STORE.questions.length}</div>
       <div class="score">Correct ${STORE.score}</div>
-      <div class="incorrect">Incorrect ${STORE.incorrect}</div>
+      <div class="incorrect">Incorrect ${STORE.incorrect}</div><br>
     </div>`);
   $("header").html(questionAndScoreHtml);
 }
@@ -118,7 +118,7 @@ function checkSelectedChoice() {
     let id_num = currentQ.choices.findIndex(i => i === selectedChoice);
     let id = "#js-explanation" + ++id_num;
     $("span").removeClass("correct-explanation");
-    if(selectedChoice === currentQ.answer.answerLetter + " " + currentQ.answer.answerChoice + " " + currentQ.answer.answerImage) {
+    if (selectedChoice === currentQ.answer.answerLetter + " " + currentQ.answer.answerChoice + " " + currentQ.answer.answerImage) {
       STORE.score++; 
       $(`${id}`).append(`<b><i>Right!</b></i> :)<br><br><span class="answer-explanation-bg">${currentQ.answer.answerImage} ${currentQ.answerExplanation}</span>`);
       $(`${id}`).addClass("correct-explanation");
@@ -126,7 +126,7 @@ function checkSelectedChoice() {
 
     else {
       STORE.incorrect++;
-      $(`${id}`).append(`<b><i>Wrong!</b></i> :/<br><br><span class="answer-bg">The answer is <b>${currentQ.answer.answerLetter} ${currentQ.answer.answerChoice}</b></span><br><br><span class="answer-explanation-bg">${currentQ.answer.answerImage} ${currentQ.answerExplanation}</span>`);
+      $(`${id}`).append(`<b><i>Wrong!</b></i> :/<br><br><span class="answer-bg">The answer is <b>${currentQ.answer.answerLetter} ${currentQ.answer.answerChoice}.</b></span><br><span class="answer-explanation-bg">${currentQ.answer.answerImage} ${currentQ.answerExplanation}</span>`);
       $(`${id}`).addClass("correct-explanation");
     }
 
@@ -144,20 +144,29 @@ function checkSelectedChoice() {
 function displayResults() {
   let resultHtml = $(`
     <div class="results">
-      <form id="js-restart">
+
         <fieldset>
           <div class="title-content">For additional intelligence types, <i>The Complete Book of Intelligence Tests</i> can be found <a href="http://elibrary.bsu.az/books_rax/N_357.pdf">here</a>.</div>
           <div class="final">Your result is <span id="final-score"></span>%.
             <script>
-              let x = Math.floor(${STORE.score}/7*100);
-              document.getElementById("final-score").innerHTML = x;
+            $(percentage);
+            function percentage() {
+              let x = Math.trunc(${STORE.score}/7*100);
+              if (x >= 1) {
+                return document.getElementById("final-score").innerHTML = x;
+              }
+
+              else {
+                return document.getElementById("final-score").innerHTML = 0;
+              }
+            }
             </script>
           </div>
           <div class="around-the-button">
             <button type="button" class="restart-button">Restart quiz ></button>
           </div>
         </fieldset>
-      </form>
+
     </div>
   `);
   STORE.currentQuestion = 0;
